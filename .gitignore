@@ -1,3 +1,6 @@
 build/
 3rdparty/fmt/
 3rdparty/range-v3/
+compile_commands.json
+
+.clangd/
