@@ -21,8 +21,7 @@ std::vector<Employee> read_all_employees(std::istream &is) {
     std::vector<Employee> employees;
     Employee buffer_employee;
     std::string buff_line;
-    while (!is.eof()) {
-        is >> buffer_employee;
+    while (is >> buffer_employee) {
         employees.push_back(buffer_employee);
     }
 
