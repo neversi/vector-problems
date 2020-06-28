@@ -65,8 +65,8 @@ int main() {
     }
     std::sort(departments.begin(), departments.end(), [] (const std::pair<std::string, int> &a, const std::pair<std::string, int> &b) {return a.second > b.second;});
     for (auto name: departments) {
-        std::cout<< name.first<< ": "<<name.second << "\n";
+         fmt::print("{0}: {1}\n",name.first, name.second);
     }
-    std::cout << departments[0].first <<" has more employees";
+    fmt::print("{0} has more employees", departments[0].first);
     return 0;
 }
