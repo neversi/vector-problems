@@ -19,11 +19,7 @@ std::istream &operator>>(std::istream &is, Employee &employee) {
 
 std::vector<Employee> read_all_employees(std::istream &is) {
     std::vector<Employee> employees;
-    Employee buffer_employee;
-    std::string buff_line;
-    while (is >> buffer_employee) {
-        employees.push_back(buffer_employee);
-    }
+    std::copy(std::istream_iterator<Employee>(is),std::istream_iterator<Employee>(),std::back_inserter(employees));
 
     // read all of the employees from provided is, think of is like std::cin
     // by the way, you can use >> on Employee, like std::cin >> buffer_employee
